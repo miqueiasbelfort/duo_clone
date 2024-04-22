@@ -4,10 +4,10 @@ import Image from 'next/image';
 import React from 'react';
 
 type Props = {
-    id: number | undefined,
+    id: number,
     title: string,
     imageSrc: string,
-    onClick: (id: number | undefined) => void,
+    onClick: (id: number) => void,
     disabled?: boolean,
     active?: boolean
 };
