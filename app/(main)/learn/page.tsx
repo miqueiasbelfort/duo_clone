@@ -5,7 +5,7 @@ import StickerWrapper from '@/components/sticker-wrapper';
 import React from 'react';
 import Header from './header';
 import UserProgress from '@/components/user-progress';
-import { json } from 'stream/consumers';
+import Unit from './unit';
 
 async function LearnPage() {
     const userProgressData = getUserProgress();
@@ -31,7 +31,15 @@ async function LearnPage() {
                 <Header title={userProgress.activeCourse.title} />
                 {units.map(unit => (
                     <div key={unit.id} className='mb-10'>
-                        {JSON.stringify(unit)}
+                        <Unit
+                            id={unit.id}
+                            order={unit.order}
+                            description={unit.description}
+                            title={unit.title}
+                            lessons={unit.lessons}
+                            activeLesson={undefined}
+                            activeLessonPorcentage={0}
+                        />
                     </div>
                 ))}
             </FeedWrapper>
