@@ -21,7 +21,7 @@ async function LessonPage() {
     return (
         <Quiz
             initialLessonId={lesson.id}
-            initialLessonChallenge={lesson.challenges}
+            initialLessonChallenges={lesson.challenges}
             initialHearts={userProgress.hearts}
             inicialPercentage={inicialPercentage}
             userSubscription={null}
