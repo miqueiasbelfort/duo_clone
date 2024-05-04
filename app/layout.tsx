@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import { Toaster } from '@/components/ui/sonner';
 import "./globals.css";
+import ExitModal from '@/components/modals/exit-model';
 
 const font = Nunito({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
       <html lang="pt-BR">
         <body className={font.className}>
           <Toaster />
+          <ExitModal />
           {children}
         </body>
       </html>
